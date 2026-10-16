@@ -14,6 +14,7 @@ export interface SiteConfig {
   midnightBiteDemoUrl: string;
   socials: {
     instagram: string | null;
+    facebook: string | null;
     behance: string | null;
     linkedin: string | null;
   };
@@ -35,11 +36,13 @@ export const SITE_CONFIG: SiteConfig = {
   midnightBiteDemoUrl: "https://casestudyreference.ai.studio/",
 
   /**
-   * Social profiles are prepared here.
-   * Kept null so no links are activated until real URLs are supplied.
+   * Social profiles:
+   * Instagram and Facebook configured with user's verified URLs.
+   * Behance and LinkedIn remain disabled (null) until supplied.
    */
   socials: {
-    instagram: null,
+    instagram: "https://www.instagram.com/aleaquiszho?psln=Ynh1NTJ0aGR1dXEw&utm_source=qr",
+    facebook: "https://www.facebook.com/people/Alex-Pomposo/pfbid0LSuJKLDbL5DRHvoncQThz8v9cXnSc6HNdgNF5jBapxH8nNkAgcp1XUVpWXtPmPzzl/",
     behance: null,
     linkedin: null,
   },
