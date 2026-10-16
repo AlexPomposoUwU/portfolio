@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Dela Gothic One", sans-serif;
+  --font-zine: "Syne", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-typewriter: "Special Elite", monospace;
+  --font-hand: "Caveat", cursive;
+
+  --color-ink: #111111;
+  --color-red: #C51E1E;
+  --color-paper: #F0EBDD;
+  --color-pure-white: #FFFFFF;
+  --color-gray: #89847E;
+}
+
+@layer base {
+  html {
+    background-color: #111111;
+    color: #F0EBDD;
+    font-family: var(--font-body);
+  }
+
+  /* Custom focus outline adhering to accessibility */
+  :focus-visible {
+    outline: 2px solid #C51E1E;
+    outline-offset: 3px;
+  }
+}
+
+/* Halftone / Photocopy subtle print texture */
+.zine-halftone {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.15) 1px, transparent 0);
+  background-size: 4px 4px;
+}
+
+.zine-halftone-light {
+  background-image: radial-gradient(rgba(240, 235, 221, 0.12) 1px, transparent 0);
+  background-size: 4px 4px;
+}
+
+/* Subtle newspaper / zine grid rule lines */
+.zine-border-thick {
+  border-width: 3px;
+  border-color: #111111;
+}
+
+.zine-border-red {
+  border-width: 3px;
+  border-color: #C51E1E;
+}
+
+/* Cutout sticker shadow effect */
+.zine-shadow-red {
+  box-shadow: 4px 4px 0px 0px #C51E1E;
+}
+
+.zine-shadow-black {
+  box-shadow: 4px 4px 0px 0px #111111;
+}
+
+.zine-shadow-paper {
+  box-shadow: 4px 4px 0px 0px #F0EBDD;
+}
+
+/* High contrast photocopy duotone filter for photos/mockups */
+.photocopy-filter {
+  filter: grayscale(100%) contrast(140%) brightness(95%);
+}
+
+.photocopy-red-duotone {
+  filter: grayscale(100%) contrast(150%);
+  mix-blend-mode: multiply;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
